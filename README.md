@@ -72,9 +72,9 @@ Ogmen_assignment/
     **NOTE: Keep the terminal running front while running the robot in gazebo**
 
 ## 6. Changes in RVIZ for visualization
-- Add laser_frame and subscribe to topics /scan and /filtered_scan to visulaize laser data
-- Change fixed_frame to odom to visulaize robot motion in rviz
-- Increase size in laser_frame approx to 0.05 for better visulaization of laser data.
+- Add LaseScan in rviz and subscribe to topics /scan and /filtered_scan to visulaize laser data.
+- Change fixed_frame to odom to visulaize robot motion in rviz.
+- Increase size in LaserScan approx to 0.05 for better visulaization of laser data.
 
-## 6. Note:
+## 7. Note:
 These instruction will help you to launch the robot in rviz and gazebo and filter lidar data while controlling with teleop_twist_keyboard. Each package has own `README.md` file please refer those for particular functinalities.

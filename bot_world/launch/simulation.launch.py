@@ -29,6 +29,10 @@ def generate_launch_description():
           'world',
           default_value=[os.path.join(pkg_bot_world, 'world', 'bot_world.world'), ''],
           description='SDF world file'),
+          DeclareLaunchArgument(
+            'use_sim_time',
+            default_value= 'true',
+            description= 'Use Sim time'),
           gazebo,
           spawner_node
     ])

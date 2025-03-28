@@ -1,5 +1,6 @@
 from launch import LaunchDescription
 from ament_index_python import get_package_share_directory
+from launch.actions import DeclareLaunchArgument
 from launch.substitutions import Command
 from launch_ros.actions import Node
 import os
@@ -27,5 +28,10 @@ def generate_launch_description():
 
     return LaunchDescription([  
         robot_state_publisher_node,
-        rviz_node
+        rviz_node,
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value= 'true',
+            description= 'Use Sim time'
+        )
     ])
