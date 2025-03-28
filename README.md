@@ -2,7 +2,7 @@
 ---
 
 ## Overview
-This repository contains packages for different tasks and conatins all required launch files and URDF and scripts to test this package first clone this repo all packages and build this in your workspace.
+This repository contains packages for different tasks and conatins all required launch files and URDF and scripts. To test this package first clone this repo all packages and build this in your workspace.
 
 ## Repository Structure
 
@@ -59,7 +59,7 @@ Ogmen_assignment/
    ```
    This will load the URDF of robot model in Gazebo world.
 
-### 4. Launch lase_filter to get filtered data on /filtered_scan
+### 4. Launch laser_filter to get filtered data on /filtered_scan
    ```bash
     ros2 launch bot_control laser_filter_launch.py
    ```
@@ -71,5 +71,5 @@ Ogmen_assignment/
    This starts the teleop_twist_keyboard package 
     **NOTE: Keep the terminal running front while running the robot in gazebo**
 
-### 6. Note:
-    These instruction will help you to launch the robot in rviz and gazebo and filter lidar data while controlling with teleop_twist_keyboard. Each package has own `README.md` file please refer those for particular functinalities.
+## 6. Note:
+These instruction will help you to launch the robot in rviz and gazebo and filter lidar data while controlling with teleop_twist_keyboard. Each package has own `README.md` file please refer those for particular functinalities.
