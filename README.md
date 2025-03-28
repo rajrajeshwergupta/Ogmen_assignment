@@ -16,7 +16,7 @@ Ogmen_assignment/
 │   ├── launch/            # Conatains Launch file launching remapping executable
 │   ├── src/              # scripts
 │   └── README.md          # Instructions for the package
-├── testbed_bringup/
+├── bot_world/
 │   ├── launch/            # Conatains Launch file for gazebo and load the world and spawn urdf in gazebo centre.
 │   └── world/             # Gazebo world
 |   └── README.md          # Instructions for the package
@@ -68,8 +68,13 @@ Ogmen_assignment/
    ```bash
    ros2 launch bot_description control.launch.py
    ```
-   This starts the teleop_twist_keyboard package 
+   This starts the teleop_twist_keyboard package.
     **NOTE: Keep the terminal running front while running the robot in gazebo**
+
+## 6. Changes in RVIZ for visualization
+- Add laser_frame and subscribe to topics /scan and /filtered_scan to visulaize laser data
+- Change fixed_frame to odom to visulaize robot motion in rviz
+- Increase size in laser_frame approx to 0.05 for better visulaization of laser data.
 
 ## 6. Note:
 These instruction will help you to launch the robot in rviz and gazebo and filter lidar data while controlling with teleop_twist_keyboard. Each package has own `README.md` file please refer those for particular functinalities.
