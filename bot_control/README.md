@@ -34,11 +34,11 @@ ros_bot_description/
    This will laod the URDF of robot model in Gazebo world.
 
 ### 4. Launch lase_filter to get filtered data on /filtered_scan
-    ```bash
+   ```bash
     ros2 launch bot_control laser_filter_launch.py
-    ```
+   ```
 
-### 4. Teleop the robot in gazebo using Keyboard
+### 5. Teleop the robot in gazebo using Keyboard
    ```bash
    ros2 launch bot_description control.launch.py
    ```
