@@ -1,13 +1,14 @@
 ## Bot_description
-Conatains bot description urdf and required launch files.
+This package contain custom gazebo world and launch file.
 
 ## Package Structure
 
 ```
-ros_bot_description/
-├── launch/            # Conatains Launch file for rviz, spwaner in gazebo and teleop using Keyboard
-└── urdf/              # URDF files for bot
-└── README.md          # Instructions for the package
+ros_nav2_assignment/
+├── bot_description/
+│   ├── launch/            # Conatains Launch file for rviz, spwaner in gazebo and teleop using Keyboard
+│   └── urdf/              # URDF files for bot
+└── README.md              # Instructions for the package
 ```
 
 
