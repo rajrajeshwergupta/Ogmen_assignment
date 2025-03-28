@@ -4,7 +4,7 @@ This package conatains the script to remap the lidar data.
 ## Package Structure
 
 ```
-ros_bot_description/
+bot_control/
 ├── launch/            # Conatains Launch file launching remapping executable
 └── src/              # scripts
 └── README.md          # Instructions for the package

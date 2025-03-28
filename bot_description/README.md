@@ -4,7 +4,7 @@ Conatains bot description urdf and required launch files.
 ## Package Structure
 
 ```
-ros_bot_description/
+bot_description/
 ├── launch/            # Conatains Launch file for rviz, spwaner in gazebo and teleop using Keyboard
 └── urdf/              # URDF files for bot
 └── README.md          # Instructions for the package

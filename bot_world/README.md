@@ -4,7 +4,7 @@ This package contains Custom gazebo world and launch file to laod world in gazeb
 ## Package Structure
 
 ```
-ros_bot_description/
+bot_world/
 ├── launch/            # Conatains Launch file for gazebo and load the world and spawn urdf in gazebo centre.
 └── world/             # Gazebo world
 └── README.md          # Instructions for the package
