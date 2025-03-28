@@ -33,14 +33,14 @@ ros_nav2_assignment/
 
 ### 2. Visulaize the robot in Rviz
 1.  ```bash
-   ros2 launch bot_description rviz.launch.py
-   ```
+   ros2 launch bot_description rviz.launch.py ```
+   
    This brings up the robot in Rviz.
 
 ### 3. Load the URDF in Gazebo empty world
 1.  ```bash
-   ros2 launch bot_description spawn.launch.py
-   ```
+   ros2 launch bot_description spawn.launch.py```
+   
    This will laod the URDF of robot model in Gazebo empty world.
 
 ### 4. Teleop the robot in gazebo using Keyboard
