@@ -47,4 +47,4 @@ ros_bot_description/
    ros2 launch bot_description control.launch.py
    ```
    This starts the teleop_twist_keyboard package 
-    **NOTE: Keep the terminal front while running the robot in gazebo**
+    **NOTE: Keep the terminal running front while running the robot in gazebo**
