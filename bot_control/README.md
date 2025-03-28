@@ -31,7 +31,7 @@ bot_control/
    ```bash
    ros2 launch bot_world simulation.launch.py
    ```
-   This will laod the URDF of robot model in Gazebo world.
+   This will load the URDF of robot model in Gazebo world.
 
 ### 4. Launch lase_filter to get filtered data on /filtered_scan
    ```bash

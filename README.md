@@ -1,7 +1,8 @@
-# Level 1: ROS2 Assignment
+# Robot Software Engineer Intern - Coding Round
+---
 
 ## Overview
-This repository contains packages for different and conatins all required launch files and URDF and scripts to test this package first clone this repo all packages and build this in your workspace.
+This repository contains packages for different tasks and conatins all required launch files and URDF and scripts to test this package first clone this repo all packages and build this in your workspace.
 
 ## Repository Structure
 
@@ -21,12 +22,6 @@ Ogmen_assignment/
 |   └── README.md          # Instructions for the package
 └── README.md              # Instructions for the assignment
 ```
-
-## Assignment Objective
-Your goals are to:
-1. Learn how to configure and use ROS2 `nav2` plugins in independent files.
-2. Set up manual map loading and localization for the given simulation environment.
-3. Implement the required navigation plugins to handle robot navigation in the `testbed_navigation` package. Only basic navigational functionality is expected in this assignment, so choose your plugins accordingly.
 
 ## System Requirements
 
@@ -52,57 +47,29 @@ Your goals are to:
    source install/setup.bash
    ```
 
-### 2. Launching the Simulation Environment
-1. Start the full simulation using:
+### 2. Visulaize the robot in Rviz
    ```bash
-   ros2 launch testbed_bringup testbed_full_bringup.launch.py
+   ros2 launch bot_description rviz.launch.py
    ```
-   This brings up the testbed environment in Gazebo and Rviz.
+   This brings up the robot in Rviz.
 
-### 3. Creating the `testbed_navigation` Package
-1. In your workspace, create a new package:
+### 3. Load gazebo world and spawn URDF in centre
    ```bash
-   ros2 pkg create testbed_navigation --build-type ament_cmake
+   ros2 launch bot_world simulation.launch.py
    ```
-2. Set up the necessary directories for parameters, launch files, and scripts.
-3. Write proper build commands in CMakeLists.txt for your navigation package.
+   This will load the URDF of robot model in Gazebo world.
 
-### 4. Map Loading
-1. Use the map provided in `testbed_bringup/maps/testbed_world.yaml`.
-2. Write actions in the launch file `testbed_navigation/launch/map_loader.launch.py` to load the map using the `map_server` plugin.
-3. Test and confirm that the map is loaded correctly in Rviz.
+### 4. Launch lase_filter to get filtered data on /filtered_scan
+   ```bash
+    ros2 launch bot_control laser_filter_launch.py
+   ```
 
-### 5. Localization
-1. Implement localization with the AMCL plugin:
-   - Write a parameter file for AMCL in `testbed_navigation/config/amcl_params.yaml`.
-   - Create actions in the launch file `testbed_navigation/launch/localization.launch.py` to run AMCL.
-   - Verify that the robot can localize itself in the simulated environment using Rviz.
+### 5. Teleop the robot in gazebo using Keyboard
+   ```bash
+   ros2 launch bot_description control.launch.py
+   ```
+   This starts the teleop_twist_keyboard package 
+    **NOTE: Keep the terminal running front while running the robot in gazebo**
 
-### 6. Navigation
-1. Set up navigation using `nav2` plugins:
-   - Configure parameter files for the global and local planners, behaviour tree plugins and any other nav2 plugin you want to use, like 'collision_monitor' or 'velocity_smoother', in `testbed_navigation/config/nav2_params.yaml`.
-   - Write actions in the launch file `testbed_navigation/launch/navigation.launch.py` to bring up the navigation workflow.
-2. Test the navigation setup by sending goals to the robot and observing its behavior.
-
-### 7. Deliverables
-1. Submit your completed `testbed_navigation` package with:
-   - Parameter files for map loading, localization, and navigation.
-   - Launch files for each component.
-   - A `README.md` describing your approach and any challenges you faced.
-2. Provide a short video or screenshots showing your robot performing localization and navigation.
-
-### 8. Evaluation Criteria
-We’ll be looking for:
-- A functional manual navigation setup.
-- Clear, well-structured parameter files and launch files.
-- A modular, well-documented implementation.
-- Successful localization and navigation in the simulation.
-
-## Notes
-- You’re welcome to modify the robot description or simulation setup to better suit your implementation.
-- Thorough testing is encouraged to ensure everything works as expected.
-- If you have questions, check out the help section and don’t hesitate to reach out to us.
-- Lastly, we encourage you to share your code for review—even if it’s still a work in progress.
----
-
-We’re excited to see how you approach this task. Good luck, and happy coding! :)
+### 6. Note:
+    These instruction will help you to launch the robot in rviz and gazebo and filter lidar data while controlling with teleop_twist_keyboard. Each package has own `README.md` file please refer those for particular functinalities.
